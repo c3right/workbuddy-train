@@ -14,8 +14,15 @@
 - Phase 1 Design Freeze：**ACCEPTED**；
 - Phase 2 Material Build：**AUTHORIZED**。
 
-## Deferred Decision
+## 2026-09-17 — L2 Demo Output Decision
 
-L2 Demo 最终采用“短研究报告”还是“PPT”暂不决策。
+用户决定 L2 Demo 最终交付采用：**短研究报告**。
 
-该选择不阻塞 Phase 2 素材制作；在进入 Phase 3、开始制作 `instructor/L2演示脚本.md` 前必须重新提醒用户并取得裁决。
+理由：
+
+- 第一次培训核心是建立正确的 Agent 工作方法与策略，而不是展示特定文件格式能力；
+- WorkBuddy 的 PPT 生成质量和稳定性尚未在本培训场景中验证；
+- 为避免引入与核心教学无关的不可控因素，L2 不生成 PPT；
+- L2 应把注意力集中在：任务定义 → Plan → 多资料综合 → 证据边界 → 中间分析 → 短研究报告 → 人工 Review → v2。
+
+因此，Phase 3 制作 `instructor/L2演示脚本.md` 时，无需再等待 PPT / 报告形态裁决，直接按“短研究报告”设计。
