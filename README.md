@@ -13,12 +13,34 @@ L2“单项任务做出来”在第一期仅由讲师演示，不要求全员现
 
 ## 当前状态
 
-- `DESIGN V0.1`：已落盘，等待审阅。
-- 当前阶段只冻结案例架构、学习目标、练习序列、目录设计和教学边界；**尚未开始批量制作案例素材**。
+- Phase 1 — Full Design：**ACCEPTED**
+- Phase 2 — Material Build：**COMPLETE / REVIEW READY**
+- Phase 3 — Learning Pack：待开始
+- Phase 4 — Dry Run / Validation：待开始
 
-## 主要文档
+L2 Demo 的最终交付形态（短研究报告 / PPT）暂缓决策；进入 Phase 3 制作 L2 演示脚本前重新确认。
 
-- [WorkBuddy L1 Lab — Full Design V0.1](docs/WORKBUDDY-L1-LAB-DESIGN.md)
+## 关键位置
+
+- [WorkBuddy L1 Lab — Full Design](docs/WORKBUDDY-L1-LAB-DESIGN.md)
+- [Design Decisions](docs/DESIGN-DECISIONS.md)
+- [Source Notes](docs/SOURCE-NOTES.md)
+- [Changelog](docs/CHANGELOG.md)
+- [学员 Lab 目录](lab/WorkBuddy-L1-Lab/)
+
+## Lab 当前内容
+
+`lab/WorkBuddy-L1-Lab/` 是后续学员在 WorkBuddy 中直接打开的项目目录，当前已经包含：
+
+- 项目背景与研究边界；
+- 项目交接记录；
+- 华东、华南、西南、华北四份区域访谈；
+- 基础经营数据；
+- 区域经营指标视觉材料；
+- 与主案例业务不同的内部简报参考样例；
+- 输出目录说明。
+
+所有案例业务内容、人物与数据均为原创虚构教学材料。
 
 ## 设计来源
 
