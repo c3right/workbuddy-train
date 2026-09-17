@@ -27,5 +27,20 @@
 - 新增 `instructor/reset/README.md`，定义无需 Git 的现场恢复方式。
 - Phase 3 标记为 COMPLETE / REVIEW READY。
 
-### Next
-- Phase 4：从干净目录做完整 Dry Run / Validation，并根据真实 WorkBuddy 行为修正提示、路径、输出格式和 reset 方案。
+### Phase 4
+- 使用 Tencent WorkBuddy + `hy4 preview` 完整实跑 L1 Exercise 0—6 与 L2 Step 1—6。
+- 结论：`PASS WITH LIGHTWEIGHT REVISIONS`。
+- 新增 `docs/PHASE-4-DRY-RUN-20260917.md`，记录完整运行观察与裁决。
+- 学员手册增加“新入职研究员接手项目”的破冰故事。
+- Exercise 0 收紧为只查看目录和文件名，不提前读取正文。
+- Exercise 3 增加“保留同一区域内部不同说法”的提醒。
+- Exercise 5 增加“不要把少数人观点升级成区域/跨区共性”的检查项。
+- L2 Plan 增加硬停止边界，避免计划通过后直接进入后续执行。
+- L2 人工 Gate 增加“少数观点被放大”“证据不足被误写成否定结论”两项检查。
+- L2 v2 修改提示改为“看是否有下面的问题，如有则修订”，减少诱导式修订。
+- 报告字数规则调整为快速阅读导向：正文尽量 1200—1800 字，必要比较表可保留。
+- 讲师手册新增“不要针对某个模型过度补 Prompt”的后台教学原则。
+
+### Current
+- Phase 1—4 均已完成第一轮。
+- 当前培训包已进入 **POST-DRY-RUN REVIEW READY** 状态。
