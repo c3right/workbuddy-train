@@ -38,19 +38,23 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 - [Source Notes](docs/SOURCE-NOTES.md)
 - [Phase 4 Dry Run](docs/PHASE-4-DRY-RUN-20260917.md)
 - [Changelog](docs/CHANGELOG.md)
-- [学员 Lab 目录](lab/WorkBuddy-L1-Lab/)
+- [学员项目目录](lab/新岚汽车渠道研究项目/)
 - [Lab Reset 说明](instructor/reset/README.md)
 
-## Lab 当前内容
+## 学员项目目录
 
-`lab/WorkBuddy-L1-Lab/` 是学员在 WorkBuddy 中直接打开的项目目录，已经包含：
+`lab/新岚汽车渠道研究项目/` 是学员在 WorkBuddy 中直接打开的工作目录。
+
+目录内部按一个真实咨询项目的口吻组织，不放“培训案例”“虚构数据”“L1 Lab”之类会破坏代入感的提示。培训属性、版权和案例虚构说明只保留在项目目录之外的本仓库文档中。
+
+项目目录已经包含：
 
 - 项目背景与研究边界；
 - 项目交接记录；
 - 华东、华南、西南、华北四份区域访谈；
 - 基础经营数据 Excel；
 - 区域经营指标视觉材料；
-- 与主案例业务不同的内部简报参考样例；
+- 与主案例业务不同的历史项目内部简报参考样例；
 - 输出目录说明。
 
 所有案例业务内容、人物与数据均为原创虚构教学材料。
