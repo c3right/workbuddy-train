@@ -15,32 +15,56 @@ L2“单项任务做出来”在第一期仅由讲师演示，不要求全员现
 
 - Phase 1 — Full Design：**ACCEPTED**
 - Phase 2 — Material Build：**COMPLETE / REVIEW READY**
-- Phase 3 — Learning Pack：待开始
+- Phase 3 — Learning Pack：**COMPLETE / REVIEW READY**
 - Phase 4 — Dry Run / Validation：待开始
 
-L2 Demo 的最终交付形态（短研究报告 / PPT）暂缓决策；进入 Phase 3 制作 L2 演示脚本前重新确认。
+L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 Web 搜索，不引入 Skill、Connector、subagent、CLI、Git 或开发环境配置。
+
+## 建议审阅顺序
+
+1. [学员第一次培训实操手册](learner/第一次培训实操手册.md)
+2. [L1 通关卡](learner/L1通关卡.md)
+3. [讲师手册](instructor/讲师手册.md)
+4. [标准事实与验收表](instructor/标准事实与验收表.md)
+5. [L2 短研究报告演示脚本](instructor/L2演示脚本.md)
 
 ## 关键位置
 
-- [WorkBuddy L1 Lab — Full Design](docs/WORKBUDDY-L1-LAB-DESIGN.md)
+- [WorkBuddy L1 Lab — Full Design V0.1](docs/WORKBUDDY-L1-LAB-DESIGN.md)
 - [Design Decisions](docs/DESIGN-DECISIONS.md)
 - [Source Notes](docs/SOURCE-NOTES.md)
 - [Changelog](docs/CHANGELOG.md)
 - [学员 Lab 目录](lab/WorkBuddy-L1-Lab/)
+- [Lab Reset 说明](instructor/reset/README.md)
 
 ## Lab 当前内容
 
-`lab/WorkBuddy-L1-Lab/` 是后续学员在 WorkBuddy 中直接打开的项目目录，当前已经包含：
+`lab/WorkBuddy-L1-Lab/` 是学员在 WorkBuddy 中直接打开的项目目录，已经包含：
 
 - 项目背景与研究边界；
 - 项目交接记录；
 - 华东、华南、西南、华北四份区域访谈；
-- 基础经营数据；
+- 基础经营数据 Excel；
 - 区域经营指标视觉材料；
 - 与主案例业务不同的内部简报参考样例；
 - 输出目录说明。
 
 所有案例业务内容、人物与数据均为原创虚构教学材料。
+
+## 第一期核心心智模型
+
+```text
+先选对工作目录
+→ 先让 Agent 看懂资料
+→ 把大工作拆成小步骤
+→ 说清楚：做什么 / 有什么 / 怎么样
+→ 必要时给参考样例
+→ 让 Agent 真正生成 / 修改文件
+→ 人检查事实、逻辑和证据边界
+→ 具体反馈，继续修改
+→ 重要成果保留 v1 / v2
+→ 明显换任务时，新建 Task
+```
 
 ## 设计来源
 
