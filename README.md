@@ -16,7 +16,9 @@ L2“单项任务做出来”在第一期仅由讲师演示，不要求全员现
 - Phase 1 — Full Design：**ACCEPTED**
 - Phase 2 — Material Build：**COMPLETE / REVIEW READY**
 - Phase 3 — Learning Pack：**COMPLETE / REVIEW READY**
-- Phase 4 — Dry Run / Validation：待开始
+- Phase 4 — Dry Run / Validation：**COMPLETE / PASS WITH LIGHTWEIGHT REVISIONS**
+
+当前培训包状态：**POST-DRY-RUN REVIEW READY**。
 
 L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 Web 搜索，不引入 Skill、Connector、subagent、CLI、Git 或开发环境配置。
 
@@ -27,12 +29,14 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 3. [讲师手册](instructor/讲师手册.md)
 4. [标准事实与验收表](instructor/标准事实与验收表.md)
 5. [L2 短研究报告演示脚本](instructor/L2演示脚本.md)
+6. [Phase 4 Dry Run 记录](docs/PHASE-4-DRY-RUN-20260917.md)
 
 ## 关键位置
 
 - [WorkBuddy L1 Lab — Full Design V0.1](docs/WORKBUDDY-L1-LAB-DESIGN.md)
 - [Design Decisions](docs/DESIGN-DECISIONS.md)
 - [Source Notes](docs/SOURCE-NOTES.md)
+- [Phase 4 Dry Run](docs/PHASE-4-DRY-RUN-20260917.md)
 - [Changelog](docs/CHANGELOG.md)
 - [学员 Lab 目录](lab/WorkBuddy-L1-Lab/)
 - [Lab Reset 说明](instructor/reset/README.md)
@@ -65,6 +69,8 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 → 重要成果保留 v1 / v2
 → 明显换任务时，新建 Task
 ```
+
+这张心智地图保持简单。Phase 4 中验证出来的更深层质量控制方法主要进入讲师手册和 L2 Demo，不增加第一次培训学员的认知负担。
 
 ## 设计来源
 
