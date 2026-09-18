@@ -459,7 +459,7 @@ Skill 本身也需要 Review。
 讲师标准答案 / 参考 Skill 放在：
 
 ```text
-instructor/
+training/instructor/
 └─ second-training/
    ├─ 参考Skill/
    ├─ 标准事实与验收表.md

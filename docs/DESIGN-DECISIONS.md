@@ -25,7 +25,7 @@
 - 为避免引入与核心教学无关的不可控因素，L2 不生成 PPT；
 - L2 应把注意力集中在：任务定义 → Plan → 多资料综合 → 证据边界 → 中间分析 → 短研究报告 → 人工 Review → v2。
 
-因此，Phase 3 制作 `instructor/L2演示脚本.md` 时，无需再等待 PPT / 报告形态裁决，直接按“短研究报告”设计。
+因此，Phase 3 制作 `training/instructor/L2演示脚本.md` 时，无需再等待 PPT / 报告形态裁决，直接按“短研究报告”设计。
 
 
 ## 2026-09-18 — Post-Phase-4 Immersion Decisions

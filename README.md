@@ -45,8 +45,8 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 1. [第一次培训｜设计与实现全记录](docs/FIRST-TRAINING-DESIGN-IMPLEMENTATION-HISTORY.md)
 2. [README](README.md)
 3. [第一次培训 Full Design](docs/WORKBUDDY-L1-LAB-DESIGN.md)
-4. [第一次培训实操手册](learner/第一次培训实操手册.md)
-5. [讲师手册](instructor/讲师手册.md)
+4. [第一次培训实操手册](training/learner/第一次培训实操手册.md)
+5. [讲师手册](training/instructor/讲师手册.md)
 6. [Phase 4 Dry Run 记录](docs/PHASE-4-DRY-RUN-20260917.md)
 
 如果要继续第二课 Skill 教程，再读：
@@ -57,11 +57,11 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 
 ## 建议审阅顺序
 
-1. [学员第一次培训实操手册](learner/第一次培训实操手册.md)
-2. [L1 通关卡](learner/L1通关卡.md)
-3. [讲师手册](instructor/讲师手册.md)
-4. [标准事实与验收表](instructor/标准事实与验收表.md)
-5. [L2 短研究报告演示脚本](instructor/L2演示脚本.md)
+1. [学员第一次培训实操手册](training/learner/第一次培训实操手册.md)
+2. [L1 通关卡](training/learner/L1通关卡.md)
+3. [讲师手册](training/instructor/讲师手册.md)
+4. [标准事实与验收表](training/instructor/标准事实与验收表.md)
+5. [L2 短研究报告演示脚本](training/instructor/L2演示脚本.md)
 6. [Phase 4 Dry Run 记录](docs/PHASE-4-DRY-RUN-20260917.md)
 
 ## 关键位置
@@ -73,12 +73,12 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 - [Phase 4 Dry Run](docs/PHASE-4-DRY-RUN-20260917.md)
 - [第二次培训 Skill 教程设计](docs/SECOND-TRAINING-SKILL-TUTORIAL-DESIGN.md)
 - [Changelog](docs/CHANGELOG.md)
-- [学员项目目录](lab/新岚汽车渠道研究项目/)
-- [Lab Reset 说明](instructor/reset/README.md)
+- [学员项目目录](training/lab/新岚汽车渠道研究项目/)
+- [Lab Reset 说明](training/instructor/reset/README.md)
 
 ## 学员项目目录
 
-`lab/新岚汽车渠道研究项目/` 是学员在 WorkBuddy 中直接打开的工作目录。
+培训产品源码统一位于 `training/`。其中 `training/lab/新岚汽车渠道研究项目/` 是学员在 WorkBuddy 中直接打开的工作目录。
 
 目录内部按一个真实咨询项目的口吻组织，不放“培训案例”“虚构数据”“L1 Lab”之类会破坏代入感的提示。培训属性、版权和案例虚构说明只保留在项目目录之外的本仓库文档中。
 

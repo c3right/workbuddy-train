@@ -351,12 +351,12 @@ L2 只由讲师演示。
 
 完成：
 
-- `learner/第一次培训实操手册.md`
-- `learner/L1通关卡.md`
-- `instructor/讲师手册.md`
-- `instructor/标准事实与验收表.md`
-- `instructor/L2演示脚本.md`
-- `instructor/reset/README.md`
+- `training/learner/第一次培训实操手册.md`
+- `training/learner/L1通关卡.md`
+- `training/instructor/讲师手册.md`
+- `training/instructor/标准事实与验收表.md`
+- `training/instructor/L2演示脚本.md`
+- `training/instructor/reset/README.md`
 
 ### Phase 4｜真实 Dry Run
 
@@ -575,9 +575,9 @@ v1 → Review → v2 是课程关键体验，不要为了现场顺滑而把案�
 1. 本文件；
 2. `README.md`；
 3. `docs/WORKBUDDY-L1-LAB-DESIGN.md`；
-4. `learner/第一次培训实操手册.md`；
-5. `instructor/讲师手册.md`；
-6. `instructor/L2演示脚本.md`；
+4. `training/learner/第一次培训实操手册.md`；
+5. `training/instructor/讲师手册.md`；
+6. `training/instructor/L2演示脚本.md`；
 7. `docs/PHASE-4-DRY-RUN-20260917.md`；
 8. `docs/DESIGN-DECISIONS.md`；
 9. `docs/CHANGELOG.md`。
