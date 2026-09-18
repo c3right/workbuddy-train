@@ -3,7 +3,7 @@
 ## Status
 
 - Role owner: CTRL
-- Lifecycle: ACTIVE
+- Lifecycle: ACCEPTED / CLOSED
 - Method: Lightweight Exploration Reference Pattern
 - Repository: `c3right/workbuddy-train`
 - Work branch: `work/wbt-awk-001-workflow-kit-onboarding`
@@ -11,7 +11,7 @@
 - Workflow Kit source: `c3right/agent-workflow-kit@9abc9b97d305432a589cf55923192378854ef283`
 - Deployment mode: FIRST_ONBOARDING
 - Intended profile: `skill-heavy`
-- Return target: continuing WBT-AWK-001 CTRL
+- Return target: NONE — CLOSED
 
 ## Goal
 
@@ -197,10 +197,18 @@ The warning is non-blocking installation evidence limitation, not an installatio
 - Remaining blocking findings: `0`
 - F-T02-ENV-001: `CLOSED`
 
-## Current CTRL Decision
+## Final CTRL Decision
 
-Implementation and validation are complete. No further IMPL/validation Task is released.
+User explicitly authorized default-branch integration and closeout.
 
-The Work remains ACTIVE only for the protected default-branch integration decision. Current `main` remains `6dabf4aefd70ceb50a68b29f0b9aa06ba1b55379`; the Work branch is ahead and not behind, so integration can be evaluated as a non-force fast-forward if the user explicitly authorizes it.
+Integration result:
 
-Main integration, closeout, tag, Release and publication remain unauthorized until separately approved.
+- pre-integration `main`: `6dabf4aefd70ceb50a68b29f0b9aa06ba1b55379`
+- integrated Work object: `f8873edf6ec3f820ad2542e97ebaa8470cea5a59`
+- mechanics: non-force fast-forward
+- merge commit / conflicts: NONE
+- post-transition verification: `main == f8873edf6ec3f820ad2542e97ebaa8470cea5a59`
+
+WBT-AWK-001 is ACCEPTED / CLOSED. Final historical summary is owned by `agents/closeouts/WBT-AWK-001.md`.
+
+Tag, Release and publication were not requested or performed.

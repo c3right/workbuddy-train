@@ -1,50 +1,42 @@
 # 任务计划
 
-## 工作信息
+## 工作信息（始终保留）
 
-- 工作编号（Work ID）：`WBT-AWK-001`
-- 主合同（Primary Task Contract）：`docs/changes/WBT-AWK-001-workflow-kit-onboarding.md`
-- 当前 Assignment：`NONE — HUMAN DECISION`
+- 工作编号（Work ID）：无
+- 主合同（Primary Task Contract）：无
 - 当前角色：`CTRL`
-- 当前状态：`ACTIVE / READY_FOR_INTEGRATION_DECISION`
+- 当前状态：`INACTIVE`
 - 更新日期：`2026-09-18`
-- Active Modules：`CORE`；Profile 专业 capability 保持 dormant。
-- Scoped Standing Git Authorization：当前 authorization 不覆盖 default-branch integration。
 
-## 目标
+## 目标（始终保留）
 
-Workflow Kit first onboarding 已完成实现与 canonical validation。当前只决定是否将已验证 Work branch 集成到 `main` 并随后 closeout。
+当前没有前台活动 Work Item。
 
-## 当前阶段
+## 当前阶段（始终保留）
 
-Human integration decision。
+等待新 Work Item。
 
-## 已完成
+## 步骤
 
-- [x] T01 training product boundary refactor：CTRL PASS。
-- [x] T02 common + skill-heavy first onboarding：CTRL implementation accepted。
-- [x] 11/11 Kit Managed snapshot identity：PASS。
-- [x] `training/` product identity：PASS / unchanged。
-- [x] T03 canonical read-only installation validator：`PASS_WITH_WARNINGS` / exit 0 / 0 errors。
-- [x] F-T02-ENV-001：CLOSED。
-- [x] Integration baseline check：`main` unchanged at baseline；Work branch ahead / behind 0。
+- [ ] 用户授权后建立唯一 Work ID、Primary Task Contract，并更新 Work Index。
+- [ ] 在进入 IMPL 前完成 Formal Work Entry Check 和必要的适用控制判断。
+- [ ] 在进入 REVIEW／Closeout 前复核实际命中的验收、入口和影响。
 
-## 下一准确动作
+## 下一准确动作（始终保留）
 
-等待用户明确决定是否授权 default-branch integration。
+等待用户明确授权下一项工作。
 
-若授权，再释放一个 integration/closeout action；未授权则保持 Work branch 为已验证 checkpoint。
+## 依赖与阻塞（始终保留）
 
-## 当前决策边界
+- Git 动作遵守 `agents/kit/git-safety.md`。
+- 未命中的专业 Module 不构成依赖或阻塞。
 
-Protected action：
+## 最近完成 Work
 
-- default-branch integration / push to `main`
-- closeout after integration
-- tag / Release / publication
+- `WBT-AWK-001`：见 `agents/closeouts/WBT-AWK-001.md`。
 
-均不得由现有 standing authorization 推定。
+## 退出条件（始终保留）
 
-## 退出条件
-
-用户决定 integration；若完成 integration，再执行相称 closeout。
+- Work 的合同验收条件满足；
+- 实际命中的 Review、Git、入口和生产影响已诚实处理；
+- 下一恢复入口和未解决事项清楚。
