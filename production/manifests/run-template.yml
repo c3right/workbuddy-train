@@ -1,0 +1,42 @@
+run:
+  id: "<run-id>"
+  project: "<project-name>"
+  status: "<planned|running|completed|failed|accepted>"
+  produced_at: "<timestamp>"
+
+inputs:
+  - id: "<input-id>"
+    path: "local/raw/<path-or-logical-id>"
+    hash: "<optional-hash>"
+
+facility:
+  repository_commit: "<commit>"
+  contracts:
+    - name: "<contract-name>"
+      version: "<version-or-commit>"
+  software:
+    - name: "<software-name>"
+      version: "<version-or-commit>"
+  skills:
+    - name: "<skill-name>"
+      version: "<version-or-commit>"
+
+execution:
+  model: "<model-if-output-dependent>"
+  host: "<host-if-environment-dependent>"
+  configuration: "<configuration-id>"
+
+outputs:
+  - id: "<output-id>"
+    path: "local/deliverables/<path-or-logical-id>"
+    hash: "<optional-hash>"
+
+quality:
+  status: "<pending|pass|accepted-risk|fail>"
+  review: "<review-path-or-none>"
+  checks:
+    - "<check>"
+
+rebuild:
+  policy: "<REQUIRED|RECOMMENDED|FUTURE_RUNS_ONLY|NOT_REQUIRED>"
+  reason: "<reason-and-affected-scope>"

@@ -1,0 +1,16 @@
+.workflow-kit.local.yml
+local/
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+*.secret
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Actual machine state belongs in ignored files; committed .workflow-kit.yml
+# records only relative paths, rules and patterns.

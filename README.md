@@ -127,3 +127,28 @@ L2 Demo 已确定采用：**短研究报告**。不生成 PPT，不加入外部 
 - `hamzafarooq/claude-code-starter` 的业务型 Skill 题材库。
 
 > 说明：本项目不会复制或翻译 `Claude Code for Everyone` 的原始案例文本和素材。考虑其公开页面标注的 CC BY-NC-ND 4.0，本项目只借鉴教学结构与机制，案例内容全部重新原创并中文化。
+
+## Development Workflow
+
+<!-- AWK:AUTO:WORKFLOW_ENTRY:BEGIN -->
+- Kit control plane: [`AGENTS.md`](AGENTS.md)
+- Current Work: [`agents/WORK_INDEX.md`](agents/WORK_INDEX.md)
+- Current Handoff: [`agents/handoffs/CURRENT.md`](agents/handoffs/CURRENT.md)
+- Project domain entry: [`docs/project/domain-entry.md`](docs/project/domain-entry.md)
+- Runtime capabilities: [`docs/operations/runtime-capabilities.md`](docs/operations/runtime-capabilities.md)
+- Installation record: [`.workflow-kit.yml`](.workflow-kit.yml)
+<!-- AWK:AUTO:WORKFLOW_ENTRY:END -->
+
+Workflow Kit governs repository-root development work. `training/` remains the Project Owned training-product source. Learner-facing or instructor-facing packages copied/exported from `training/` must remain standalone and must not depend on repository-root Kit control files.
+
+## README Source Map
+
+| README section | Authority source | Refresh trigger | Update mode |
+|---|---|---|---|
+| Project positioning and training goals | `README.md`, `docs/DESIGN-DECISIONS.md` | Training goals or audience change | `STRUCTURAL_REFRESH` |
+| Current training status | `README.md`, `docs/CHANGELOG.md`, `docs/FIRST-TRAINING-DESIGN-IMPLEMENTATION-HISTORY.md` | Training phase or accepted design changes | `STRUCTURAL_REFRESH` |
+| Training product paths | Actual `training/` tree | Product source layout changes | `STRUCTURAL_REFRESH` |
+| Development workflow | `AGENTS.md`, `.workflow-kit.yml`, `agents/WORK_INDEX.md` | Kit, Profile or active Work entry changes | `AUTO_REFRESH` |
+| Documentation navigation | `docs/README.md`, actual docs tree | Major document added, moved or retired | `AUTO_REFRESH` or `STRUCTURAL_REFRESH` |
+
+Maintenance rules: [`docs/operations/readme-navigation.md`](docs/operations/readme-navigation.md).

@@ -1,0 +1,67 @@
+kit:
+  name: agent-workflow-kit
+  version: "0.1.0-alpha.0"
+  source_commit: "9abc9b97d305432a589cf55923192378854ef283"
+  installed_at: "2026-09-18"
+
+profile:
+  name: "skill-heavy"
+
+installation:
+  manifest_version: "0.2"
+  template_layers:
+    - common
+    - skill-heavy
+
+entries:
+  control_plane: AGENTS.md
+  project_domain: docs/project/domain-entry.md
+
+overrides:
+  registry: agents/overrides/registry.json
+  required: true
+
+local_state:
+  file: .workflow-kit.local.yml
+  required: false
+  must_be_ignored: true
+  allowed_roots:
+    - local/
+
+managed_files:
+  - agents/kit/core-protocol.md
+  - agents/kit/session-routing.md
+  - agents/kit/planning-and-handoff.md
+  - agents/kit/git-safety.md
+  - agents/kit/normative-asset-change-control.md
+  - agents/kit/software-tdd-quality-floor.md
+  - agents/kit/skill-design-principles.md
+  - agents/kit/production-trace.md
+  - agents/kit/portability-and-distribution.md
+  - agents/kit/lightweight-exploration-reference.md
+  - agents/kit/control-continuity-succession-reference.md
+
+project_owned_files:
+  - README.md
+  - docs/README.md
+  - docs/operations/readme-navigation.md
+  - docs/operations/runtime-capabilities.md
+  - docs/project/domain-entry.md
+  - AGENTS.md
+  - .workflow-kit.yml
+  - agents/overrides/registry.json
+  - task_plan.md
+  - findings.md
+  - progress.md
+  - agents/WORK_INDEX.md
+  - agents/handoffs/CURRENT.md
+  - agents/KIT_CANDIDATES.md
+  - .gitignore
+  - .gitattributes
+  - docs/changes/SC-template.md
+  - production/manifests/run-template.yml
+
+external_managed:
+  planning_with_files: true
+  trellis: false
+  third_party_skills: []
