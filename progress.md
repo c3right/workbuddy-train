@@ -7,21 +7,22 @@
 ## 当前 Checkpoint
 
 - T01：`PASS / COMPLETE`。
-- T02：`IMPLEMENTATION ACCEPTED / VALIDATION PENDING`。
-- T03：`BLOCKED_BY_ENVIRONMENT / RETRY ON COMPUTER-SIDE`。
+- T02：`IMPLEMENTATION ACCEPTED / COMPLETE`。
+- T03：`PASS_WITH_WARNINGS / COMPLETE`。
 - Selected Profile：`skill-heavy`。
 - Fixed Kit source：`9abc9b97d305432a589cf55923192378854ef283`。
-- Layer contract：`common + skill-heavy`。
 - Kit Managed snapshot identity：`PASS 11/11`。
 - `training/` product identity：`PASS / tree unchanged`。
-- Remaining gate：canonical installation validator real execution；见 `F-T02-ENV-001`。
+- Canonical validator：`PASS_WITH_WARNINGS`, exit `0`, errors `0`, warnings `1`。
+- Remaining blocking findings：`0`。
+- Integration state：`main` = `6dabf4aefd70ceb50a68b29f0b9aa06ba1b55379`; Work branch ahead 6 / behind 0 before CTRL status-sync commit.
 
 ## Human-facing Progress
 
-产品边界重构已完成；Kit first onboarding 已完成并通过 CTRL 结构核验；当前只剩最后的安装完整性 validator 证据，第一次 T03 因 remote shell 环境阻断，下一步切换 computer-side/local execution surface。
+产品边界、Kit 首次接入和 canonical validator 均已完成。当前实质工作已结束，只剩是否把已验证 Work branch 合入 `main` 的人工决策。
 
 ## 最近 Checkpoint
 
-- T03 首次尝试未启动 validator，因此无 exit code、无 validator status output。
-- Remote branch 在尝试前后均保持 `d800759f32fc069c972e711ccc50ae0240519978`。
-- 当前没有安装 remediation 需求。
+- T03 validator warning：`MERGE_HISTORY_NOT_FULLY_VERIFIABLE`，因为没有 merge baseline；这是非阻断证据限制。
+- F-T02-ENV-001 已关闭。
+- 无 remediation 需求。

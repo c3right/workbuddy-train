@@ -122,7 +122,19 @@ CTRL 已独立确认：
 
 ### WBT-AWK-001-T03 — Installation Validator Completion
 
-**Status: RELEASED BY CTRL**
+**CTRL Review: PASS_WITH_WARNINGS / COMPLETE**
+
+Validated target: `77c9f751922f346e1719628de2cc72848f9e5309`
+
+Validator result:
+
+- status: `PASS_WITH_WARNINGS`
+- exit code: `0`
+- errors: `0`
+- warnings: `1`
+- warning: `MERGE_HISTORY_NOT_FULLY_VERIFIABLE` — no merge baseline; arbitrary historical prose preservation cannot be mechanically proven
+
+The warning is non-blocking installation evidence limitation, not an installation-integrity error.
 
 目标：只补齐 canonical read-only installation validator 的真实执行证据，不修改安装语义。
 
@@ -174,8 +186,21 @@ CTRL 已独立确认：
 - Open evidence gap: `F-T02-ENV-001`
 - Remediation: `NOT_REQUIRED`; validation-only follow-up required
 
+### T03
+
+- Verdict: `PASS_WITH_WARNINGS / COMPLETE`
+- Validator target: `77c9f751922f346e1719628de2cc72848f9e5309`
+- Fixed Kit source: `9abc9b97d305432a589cf55923192378854ef283`
+- Canonical validator exit code: `0`
+- Errors: `0`
+- Warnings: `1`
+- Remaining blocking findings: `0`
+- F-T02-ENV-001: `CLOSED`
+
 ## Current CTRL Decision
 
-Release exactly one task: `WBT-AWK-001-T03 — Installation Validator Completion`.
+Implementation and validation are complete. No further IMPL/validation Task is released.
 
-No human decision is required before T03. T03 is validation-only and does not authorize semantic remediation, main integration, Release, tag or publication.
+The Work remains ACTIVE only for the protected default-branch integration decision. Current `main` remains `6dabf4aefd70ceb50a68b29f0b9aa06ba1b55379`; the Work branch is ahead and not behind, so integration can be evaluated as a non-force fast-forward if the user explicitly authorizes it.
+
+Main integration, closeout, tag, Release and publication remain unauthorized until separately approved.
