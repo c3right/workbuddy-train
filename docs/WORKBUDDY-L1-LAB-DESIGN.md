@@ -1,5 +1,7 @@
 # WorkBuddy L1 Lab — Full Design V0.1
 
+> **Historical note (2026-09-18):** 本文件是第一课 Phase 1 的早期 Full Design 基线，已于后续 Phase 中实施并经过 Dry Run。文件中的旧目录名、Exercise 0 早期限制、L2 早期 Web/PPT 设想等，已被后续决策覆盖。继续维护项目时请先读 `docs/FIRST-TRAINING-DESIGN-IMPLEMENTATION-HISTORY.md`，再以当前 learner / instructor 文件为现行事实。
+
 > Status: **DESIGN REVIEW CANDIDATE**  
 > Scope: 第一次培训的“认知重塑 + L1 工具跑起来”  
 > Audience: 研究员为主，同时兼容行政、数据分析岗位；默认只有网页端大模型聊天经验  
