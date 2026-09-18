@@ -1,5 +1,7 @@
 # Phase 4 Dry Run｜2026-09-17
 
+> **Post-run note (2026-09-18):** 本文件忠实保留 Dry Run 当时的即时判断。其后又完成 Immersion Pass，其中 Exercise 0 的“只看目录和文件名”修订被撤销，改为自然的真实工作表达；Lab 也全面清理培训痕迹。当前设计请以 `docs/FIRST-TRAINING-DESIGN-IMPLEMENTATION-HISTORY.md`、当前学员手册和讲师手册为准。
+
 ## 1. Run Summary
 
 - Runtime：Tencent WorkBuddy
