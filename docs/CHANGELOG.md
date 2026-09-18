@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-18
+
+### Documentation Consolidation
+- 新增 `docs/FIRST-TRAINING-DESIGN-IMPLEMENTATION-HISTORY.md`，把第一次培训从需求形成、参考来源、案例选择、Exercise 设计、Phase 1—4、Dry Run、Immersion Pass、PNG 修复到当前不应回退的设计基线完整落盘。
+- 新增 `docs/SECOND-TRAINING-SKILL-TUTORIAL-DESIGN.md`，详细记录“从重复 Prompt 到自己的第一个 Skill”的第二课候选方案。
+- 第二课当前状态明确为 **DESIGN PROPOSAL / NOT YET IMPLEMENTED**，后续会话可据此继续 Design Freeze、素材制作、学员包、讲师包和 Dry Run。
+- 第二课推荐首个 Skill 为“访谈材料综合 Skill”，主线为：普通任务 → 识别重复规则 → 创建 Skill → 试用 → Review → 修改 → 新材料迁移测试。
+- 记录后续可参考的公开项目：`carlvellotti/claude-code-everyone-course`、`lhfer/claude-howto-zh-cn`、`debs-obrien/learn-agent-skills`、Anthropic `skills/skill-creator`、`hamzafarooq/claude-code-starter`。
+- README 增加“新会话建议先读”与第二期候选状态，目标是让未来会话无需重新翻聊天记录即可恢复项目脉络。
+
+### Binary Asset Repair
+- 修复 `区域经营指标截图.png` 远端二进制损坏问题。
+- 修复后正常 Git blob SHA：`223889a30ca67acfe1cbb89898f9c4c972de5415`。
+- 修复 commit：`c2d16d0fe0b7f05f0f0ef16bd0f53c81b265394c`。
+- 后续二进制培训素材正式分发前应增加“实际下载后可打开”的完整性检查。
+
 ## 2026-09-17
 
 ### Phase 1
@@ -50,4 +66,4 @@
 
 ### Current
 - Phase 1—4 均已完成第一轮。
-- 当前培训包已进入 **POST-DRY-RUN REVIEW READY** 状态。
+- 当前第一期培训包已进入 **POST-DRY-RUN REVIEW READY** 状态。
