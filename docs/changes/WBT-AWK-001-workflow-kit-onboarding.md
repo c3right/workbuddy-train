@@ -106,11 +106,33 @@ Exit criteria:
 
 ### WBT-AWK-001-T02 — Workflow Kit First Onboarding
 
-**Status: RELEASED BY CTRL**
+**CTRL Review: IMPLEMENTATION ACCEPTED / VALIDATION PENDING @ `7932827ae506e1ab92819dc8a265d317c7c5d1c0`**
 
-Entry HEAD: `8540d9febc9817c6a7af64df0192a06b3012d37a`
+Actual Entry HEAD: `2ef536910b86cf6934bb2740da17cecd48d8bbee`
 
 目标：按 `skill-heavy`、source `9abc9b97...` 将 Kit 部署到 repository root，建立 Project Domain Entry，并保持 `training/` 为 Project Owned product source.
+
+CTRL 已独立确认：
+
+- `common + skill-heavy` 安装结构与 Manifest 一致；
+- 11 个 Kit Managed snapshots 与固定 source commit 的对应 blob SHA 全部一致；
+- `training/` tree SHA 在 T02 前后完全一致；
+- scope deviation：`NONE`；
+- 唯一未满足的 completion evidence 是 canonical installation validator 未真实执行，见 `F-T02-ENV-001`。
+
+### WBT-AWK-001-T03 — Installation Validator Completion
+
+**Status: RELEASED BY CTRL**
+
+目标：只补齐 canonical read-only installation validator 的真实执行证据，不修改安装语义。
+
+要求：
+
+- 在可同时 materialize 当前 target branch 与固定 Kit source `9abc9b97d305432a589cf55923192378854ef283` 的环境执行 validator；
+- validator 对象必须是 T03 entry HEAD；
+- 若结果为 `PASS` / `PASS_WITH_WARNINGS`，返回完整状态、exit code 与 findings；
+- 若结果为 `FAIL` / `NOT_VERIFIABLE`，只 RETURN evidence，不自行修复；
+- 不修改 `training/**`，不进入 main integration / Release / tag。
 
 ### Later Tasks
 
@@ -141,8 +163,19 @@ Entry HEAD: `8540d9febc9817c6a7af64df0192a06b3012d37a`
 - Kit installation leakage: `NONE`
 - Remediation: `NOT_REQUIRED`
 
+### T02
+
+- Verdict: `IMPLEMENTATION_ACCEPTED / VALIDATION_PENDING`
+- Reviewed object: `2ef536910b86cf6934bb2740da17cecd48d8bbee..7932827ae506e1ab92819dc8a265d317c7c5d1c0`
+- Manifest / ownership structure: `PASS`
+- Kit Managed source identity: `PASS 11/11`
+- Training product identity: `PASS / tree unchanged`
+- Scope drift: `NONE`
+- Open evidence gap: `F-T02-ENV-001`
+- Remediation: `NOT_REQUIRED`; validation-only follow-up required
+
 ## Current CTRL Decision
 
-Release exactly one implementation task: `WBT-AWK-001-T02`.
+Release exactly one task: `WBT-AWK-001-T03 — Installation Validator Completion`.
 
-T02 must complete first onboarding only and RETURN. It does not authorize main integration, Release, tag, publication, or any later task.
+No human decision is required before T03. T03 is validation-only and does not authorize semantic remediation, main integration, Release, tag or publication.

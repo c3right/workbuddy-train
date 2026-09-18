@@ -1,10 +1,10 @@
 # 当前会话交接
 
 - Work ID：`WBT-AWK-001`
-- 来源角色：`BOUNDED IMPL — WBT-AWK-001-T02`
-- 目标角色：`continuing WBT-AWK-001 CTRL`
-- Session Action：`RETURN`
-- Context Strategy：`REFRESH`
+- 来源角色：`continuing WBT-AWK-001 CTRL`
+- 目标角色：`BOUNDED VALIDATION — WBT-AWK-001-T03`
+- Session Action：`CREATE`
+- Context Strategy：`BOUNDED`
 - Return Target：`continuing WBT-AWK-001 CTRL`
 - 准备日期：`2026-09-18`
 
@@ -15,47 +15,46 @@
 - Execution checkpoint：`task_plan.md`
 - Findings：`findings.md`
 - Install record：`.workflow-kit.yml`
-- Project Domain Entry：`docs/project/domain-entry.md`
 - Authorization：Primary Task Contract 中的 Scoped Standing Git Authorization
 
 ## Minimum Read Set
 
-1. `docs/changes/WBT-AWK-001-workflow-kit-onboarding.md`
+1. `AGENTS.md`
 2. `.workflow-kit.yml`
-3. `findings.md`
-4. T02 implementation commit / diff and remote verification evidence
-
-historical evidence 默认 pointer-first / on-demand。
+3. `docs/changes/WBT-AWK-001-workflow-kit-onboarding.md`
+4. `findings.md`
+5. Kit source 的 `docs/operations/installation-integrity-validation.md`
 
 ## 交接目的
 
-T02 first onboarding implementation 完成后 RETURN CTRL。CTRL 复核 Manifest / snapshot / entry / product-boundary evidence，并处理 canonical validator execution blocker。
+只补齐 T02 缺失的 canonical installation validator 真实运行证据。不要重新实施 onboarding。
 
-## 自上次交接后的变化
+## 已确认事实
 
-- repository root 建立 Workflow Kit common + skill-heavy control plane。
-- `training/` 保持 Project Owned training-product source，不在其内部部署 Kit。
-- Kit Managed snapshots 固定到 source commit `9abc9b97d305432a589cf55923192378854ef283`。
-- 当前 host 无法 materialize remote repositories，因此 canonical installation validator 尚未获得真实运行结果。
-
-## 授权范围
-
-仅限 `WBT-AWK-001-T02` first onboarding、exact commit、non-force push 与 postcondition verification。不得进入 main integration、Release、tag 或后续 Task。
+- T01：PASS / COMPLETE。
+- T02 implementation：CTRL accepted。
+- T02 implementation HEAD：`7932827ae506e1ab92819dc8a265d317c7c5d1c0`。
+- Kit source：`9abc9b97d305432a589cf55923192378854ef283`。
+- 11/11 Kit Managed blob SHA 已由 CTRL 对 source tree 独立核对一致。
+- `training/` tree 在 T02 前后完全一致。
+- 唯一 open finding：`F-T02-ENV-001`。
 
 ## Required Output
 
-向 CTRL 只返回 T02 要求的 Entry / Final HEAD、安装结构、Project Owned merge、snapshot/Manifest consistency、validation、training diff、warnings/deviations、Git verification 和 open issues。
+返回：
+
+- validator target HEAD
+- exact Kit source commit
+- command
+- exit code
+- validator status
+- findings / warnings
+- project tree changed by validator: YES / NO
+- open issue
 
 ## Do Not Do
 
-- 不修改 `training/**` 产品内容；
-- 不创建 selected Manifests 之外的治理资产；
-- 不修改 Kit Managed snapshots；
-- 不自动激活 Trellis / Specialist / TDD / Production；
-- 不进入后续 Task、main integration、Release 或 tag。
-
-## Delta State Sync
-
-- [x] 当前 Work / Assignment owner 已指向 Primary Task Contract。
-- [x] validator execution blocker 写入 `findings.md`。
-- [x] RETURN target 与下一决策边界明确。
+- 不修改安装语义；
+- 不修改 `training/**`；
+- validator FAIL / NOT_VERIFIABLE 时不自行 remediation；
+- 不进入 main integration、Release、tag 或 publication。
