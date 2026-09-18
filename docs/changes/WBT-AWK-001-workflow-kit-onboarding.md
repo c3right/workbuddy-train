@@ -80,7 +80,9 @@ CTRL release one IMPL Task
 
 ### WBT-AWK-001-T01 — Training Product Boundary Refactor
 
-只做目录/产品边界重构，不安装 Workflow Kit。
+**CTRL Review: PASS / COMPLETE @ `8540d9febc9817c6a7af64df0192a06b3012d37a`**
+
+只做目录/产品边界重构，不安装 Workflow Kit.
 
 Expected semantic changes:
 
@@ -104,9 +106,11 @@ Exit criteria:
 
 ### WBT-AWK-001-T02 — Workflow Kit First Onboarding
 
-只有 T01 经 CTRL Review 通过后释放。
+**Status: RELEASED BY CTRL**
 
-目标：按 `skill-heavy`、source `9abc9b97...` 将 Kit 部署到 repository root，建立 Project Domain Entry，并保持 `training/` 为 Project Owned product source。
+Entry HEAD: `8540d9febc9817c6a7af64df0192a06b3012d37a`
+
+目标：按 `skill-heavy`、source `9abc9b97...` 将 Kit 部署到 repository root，建立 Project Domain Entry，并保持 `training/` 为 Project Owned product source.
 
 ### Later Tasks
 
@@ -125,8 +129,20 @@ Exit criteria:
 - Authorization source: user approved deployment plan and assigned current session as CTRL on 2026-09-18
 - Expiry: Work closeout, scope/branch/baseline drift, user revocation, or protected action request
 
+## CTRL Review Log
+
+### T01
+
+- Verdict: `PASS / COMPLETE`
+- Reviewed object: `0e46c41ca3c0934fe02ef696e9a7564fb370c4e1..8540d9febc9817c6a7af64df0192a06b3012d37a`
+- Scope drift: `NONE`
+- Old root paths remaining: `NONE` outside migration provenance
+- Learner/Lab content identity: `PASS`
+- Kit installation leakage: `NONE`
+- Remediation: `NOT_REQUIRED`
+
 ## Current CTRL Decision
 
-Release exactly one implementation task: `WBT-AWK-001-T01`.
+Release exactly one implementation task: `WBT-AWK-001-T02`.
 
-No independent Formal Review is required at entry. CTRL will review the real T01 diff and evidence before any Kit installation task is released.
+T02 must complete first onboarding only and RETURN. It does not authorize main integration, Release, tag, publication, or any later task.
