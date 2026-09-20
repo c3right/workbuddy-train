@@ -1,37 +1,35 @@
 # 当前会话交接
 
-- Work ID：无
+- Work ID：`WBT-AWK-002`
 - 来源角色：`CTRL`
-- 目标角色：`CTRL`
-- Session Action：`STAY`
-- Context Strategy：`CONTINUE`
-- Return Target：无
-- 准备日期：`2026-09-18`
-
-## 当前状态
-
-当前没有前台活动 Formal Work。
-
-最近完成：
-
-- `WBT-AWK-001`：`ACCEPTED / CLOSED / INTEGRATED`
-- Closeout：`agents/closeouts/WBT-AWK-001.md`
+- 目标角色：`BOUNDED IMPL — WBT-AWK-002-T01`
+- Session Action：`CREATE`
+- Context Strategy：`BOUNDED`
+- Fresh Independence：`NO`
+- Execution Surface：`REMOTE`
+- Return Target：`continuing WBT-AWK-002 CTRL`
+- 准备日期：`2026-09-20`
 
 ## Authority Pointers
 
+- Primary Task Contract：`docs/changes/WBT-AWK-002-kit-upgrade-latest.md`
 - Lifecycle：`agents/WORK_INDEX.md`
-- Execution next action：`task_plan.md`
-- Git safety：`agents/kit/git-safety.md`
-- Installation record：`.workflow-kit.yml`
+- Current Planning：root `task_plan.md / findings.md / progress.md` until T01 performs the required 0.3 migration
+- Install record：`.workflow-kit.yml`
 
 ## 交接目的
 
-无当前交接任务；等待新 Work。
+只执行 T01 upgrade migration。T01 自身必须把当前 root Planning state 迁到 `agents/planning/current/**`，并把旧 archive path 迁到 `agents/planning/archive/**`。
 
-## 授权范围
+## Required Output
 
-无；等待用户明确授权新 Work Item。
+返回 Entry / Final HEAD、planning migration、Kit snapshot identity、Project Owned merge、Manifest consistency、training identity、validation、scope deviation、commit/push/remote verification 与 open issues。
 
 ## Do Not Do
 
-不得把讨论或建议视为实施授权；不得自动执行受用户门禁控制的 Git 或外部写动作。
+- 不进入 canonical validator T02；
+- 不修改 `training/**`；
+- 不触碰 `.planning/**`；
+- 不创建 Override；
+- 不更新 `main`；
+- 不 tag / Release / publication。

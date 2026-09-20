@@ -2,7 +2,9 @@
 
 ## 当前活动工作
 
-无。
+| ID | 标题 | 类型 | 状态 | 主合同 | 当前 Assignment | Return Target |
+|---|---|---|---|---|---|---|
+| `WBT-AWK-002` | Workflow Kit Upgrade to Latest | Kit upgrade / planning-layout migration | `ACTIVE / T01` | `docs/changes/WBT-AWK-002-kit-upgrade-latest.md` | `WBT-AWK-002-T01` | continuing WBT-AWK-002 CTRL |
 
 ## 其他开放工作
 

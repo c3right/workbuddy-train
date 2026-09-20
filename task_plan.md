@@ -1,42 +1,36 @@
 # 任务计划
 
-## 工作信息（始终保留）
+## 工作信息
 
-- 工作编号（Work ID）：无
-- 主合同（Primary Task Contract）：无
-- 当前角色：`CTRL`
-- 当前状态：`INACTIVE`
-- 更新日期：`2026-09-18`
+- 工作编号（Work ID）：`WBT-AWK-002`
+- 主合同（Primary Task Contract）：`docs/changes/WBT-AWK-002-kit-upgrade-latest.md`
+- 当前 Assignment：`WBT-AWK-002-T01`
+- 当前角色：`BOUNDED IMPL ONLY — KIT UPGRADE MIGRATION`
+- 当前状态：`ACTIVE / T01`
+- 更新日期：`2026-09-20`
+- Old Kit source：`9abc9b97d305432a589cf55923192378854ef283`
+- New Kit source：`ad641919f612880f493f2dc73fd3a8eb4df91253`
+- Profile：`skill-heavy`
+- Scoped Standing Git Authorization：见 Primary Contract。
 
-## 目标（始终保留）
+## 目标
 
-当前没有前台活动 Work Item。
+只执行 WBT-AWK-002-T01：把当前 Manifest 0.2 安装升级到固定新 source 的 Manifest 0.3，包括 Planning Layout v2 migration、Kit snapshots refresh 和 Project Owned entry merge，同时保持 `training/**` 不变。
 
-## 当前阶段（始终保留）
+## 当前阶段
 
-等待新 Work Item。
+T01 upgrade migration implementation。
 
-## 步骤
+## 下一准确动作
 
-- [ ] 用户授权后建立唯一 Work ID、Primary Task Contract，并更新 Work Index。
-- [ ] 在进入 IMPL 前完成 Formal Work Entry Check 和必要的适用控制判断。
-- [ ] 在进入 REVIEW／Closeout 前复核实际命中的验收、入口和影响。
+由 bounded IMPL 读取 Primary Contract 与固定新 Kit source，实施 T01；完成后 RETURN CTRL，不进入 validator 或 main integration。
 
-## 下一准确动作（始终保留）
+## 依赖与阻塞
 
-等待用户明确授权下一项工作。
+- 当前无已知 blocker。
+- `.planning/**` 是 External Managed，禁止纳入迁移。
+- default-branch integration 未授权。
 
-## 依赖与阻塞（始终保留）
+## 退出条件
 
-- Git 动作遵守 `agents/kit/git-safety.md`。
-- 未命中的专业 Module 不构成依赖或阻塞。
-
-## 最近完成 Work
-
-- `WBT-AWK-001`：见 `agents/closeouts/WBT-AWK-001.md`。
-
-## 退出条件（始终保留）
-
-- Work 的合同验收条件满足；
-- 实际命中的 Review、Git、入口和生产影响已诚实处理；
-- 下一恢复入口和未解决事项清楚。
+T01 完成 scoped commit + non-force push + evidence RETURN。
