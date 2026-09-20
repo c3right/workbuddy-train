@@ -3,7 +3,7 @@
 ## Status
 
 - Role owner: CTRL
-- Lifecycle: ACTIVE
+- Lifecycle: SUSPENDED / WAITING_FOR_UPSTREAM_KIT_REVISION
 - Method: Lightweight Exploration Reference Pattern
 - Repository: `c3right/workbuddy-train`
 - Work branch: `work/wbt-awk-002-kit-upgrade-latest`
@@ -60,7 +60,7 @@ No default-branch integration is authorized by this Work initialization.
 
 ### WBT-AWK-002-T01 — Upgrade Migration Implementation
 
-**Status: RELEASED BY CTRL**
+**Status: SUSPENDED BEFORE SUBSTANTIVE IMPL**
 
 Apply the fixed new Kit source to the current `skill-heavy` installation.
 
@@ -124,6 +124,10 @@ Final Work acceptance additionally requires canonical validator `PASS` or `PASS_
 
 ## Current CTRL Decision
 
-Release exactly one Task: `WBT-AWK-002-T01 — Upgrade Migration Implementation`.
+Upgrade execution is **SUSPENDED before substantive T01 implementation**.
 
-No independent Formal Review is required at entry. CTRL will judge the actual migration diff and evidence before releasing canonical validation.
+Reason: planned CTRL succession / forced reconstitution UX semantics in the new Kit need clarification upstream before this project upgrades to that Kit version. The target project should not upgrade into a control-entry behavior that is still being refined.
+
+Resume condition: a newer fixed `agent-workflow-kit` source commit is accepted with clarified CTRL succession/reconstitution packaging semantics. On resume, refresh both target baseline and latest Kit source before re-releasing T01.
+
+No T01 implementation, canonical validator, main integration, tag, Release or publication is currently authorized.

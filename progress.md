@@ -6,19 +6,17 @@
 
 ## 当前 Checkpoint
 
-- Baseline：`b920d80823303d3f69dbb04e346b8ef2df55b477`
-- Old Kit source：`9abc9b97d305432a589cf55923192378854ef283`
-- New Kit source：`ad641919f612880f493f2dc73fd3a8eb4df91253`
-- Old Manifest：`0.2`
-- Target Manifest：`0.3`
-- Old Kit Managed drift check：`PASS 11/11`
-- Override registry：empty
-- Current Task：`WBT-AWK-002-T01`
+- Work 初始化与 upgrade delta analysis：COMPLETE。
+- T01 substantive implementation：NOT STARTED。
+- Work state：`SUSPENDED / WAITING_FOR_UPSTREAM_KIT_REVISION`。
+- 当前目标项目仍运行已接受的旧 Kit source：`9abc9b97d305432a589cf55923192378854ef283`。
+- 此前分析的新 source `ad641919...` 不再作为待执行部署目标锁定；恢复时重新固定 latest accepted source。
+- `main` 未因 WBT-AWK-002 改动。
 
 ## Human-facing Progress
 
-升级差异分析已完成，当前进入唯一 implementation Task：Planning Layout v2 migration + Kit refresh + Project Owned entry merge。
+升级已完成分析和初始化，但在任何实际 migration 前暂停。先回 Workflow Kit 项目把 CTRL planned succession / forced reconstitution 流程整清楚；随后再回来升级到修订后的新版本。
 
 ## 最近 Checkpoint
 
-- WBT-AWK-002 Primary Contract 已创建。
+- 已确认当前 UX 歧义集中在“new session re-Adoption 与 successor prompt packaging”的闭环。
