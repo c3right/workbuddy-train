@@ -1,102 +1,23 @@
-# WorkBuddy Train — Kit 控制面入口
+# AGENTS.md — WorkBuddy Train
 
-## 安装合同
+本项目不再部署 Workflow Kit。持续工作使用 Planning with Files（PWF），共享任务入口为 [`.planning/README.md`](.planning/README.md)。开始或接手任务，先读本文件和 [README](README.md)，再读选定任务的授权和状态文件；按需查阅课程设计、材料和历史证据。
 
-- Kit profile：`skill-heavy`
-- Install record：`.workflow-kit.yml`
-- Project Domain Entry：`docs/project/domain-entry.md`
-- Registered Overrides：`agents/overrides/registry.json`
-- Local-only contract：`.workflow-kit.yml#local_state`
+## 文档职责与唯一规则来源
 
-`agents/kit/*.md` 是固定 source commit 的 Kit Base 快照，项目不得直接修改。
+- **本文件**统一维护项目的目录职责、安全和协作规则，不记具体任务授权、执行流水或进度。README 与目录索引只做导航；移动或退役入口时，同批检查并更新相关链接。
+- **`.planning/<任务ID>/TASK.md`**记录用户确认的目标、范围、限制、验收条件和授权依据（有预算时也记预算）。`task_plan.md` 记录阶段与下一步，`findings.md` 记录发现、来源与取舍，`progress.md` 记录执行、验证和交接。仅在确有需要时加专项记录；项目根不另放任务状态文件。
+- **`docs/`**保存课程设计、设计依据、可复用知识与既有培训历史。第一期和第二期的入口见 [文档索引](docs/README.md)。课程成熟度可在 README 概述；任务执行状态以选定 PWF 记录为准。
+- **`training/`**保存学员、讲师和 Lab 产品源。课程包应可独立使用，不依赖仓库治理文件；Lab 保持真实业务语境，不混入治理说明。
 
-## 自然语言 Reference 调用入口
+## 任务指令与跨会话协作
 
-以下三个 canonical intent 是薄型 natural-language routing alias，不是 command parser。用户使用语义等价的自然语言表达时也应路由到同一 intent，不要求逐字匹配 canonical phrase；入口只负责读取与执行对应 Reference，不复制其正文。
-
-### 按轻量探索治理规则
-
-读取 `agents/kit/lightweight-exploration-reference.md`。第一轮响应复述其中的 Core Principle，明确确认“当前 Work 后续按该 Reference 治理”，然后继续当前 Work；不创建 LIGHTWEIGHT_MODE，不要求内部开关，也不自动建立 Human Gate。
-
-### 做CTRL交接
-
-读取 `agents/kit/control-continuity-succession-reference.md` 并把该 intent 解释为 planned succession。第一轮响应复述其中的 Core Principle，明确当前进入 planned succession，refresh canonical repository facts，并生成最小 CTRL Continuity Delta 草案，至少包含：
-
-- Current Control Framing
-- Decision Lineage
-- Rejected / Deferred Paths
-- Next Decision Boundary
-
-先让人工确认 / 修正 Delta 草案。只有人工确认后，才按既有 Planning / Handoff owner 规则决定是否 durable 落盘，并输出 successor CTRL 短提示词；不创建 Delta ledger。canonical phrase 本身不自动授权 Git 写入，commit / push 仍受当前 authority 与 Git safety 约束。
-
-### 重建CTRL
-
-读取 `agents/kit/control-continuity-succession-reference.md` 并把该 intent 解释为 old CTRL unavailable / forced CTRL reconstitution。第一轮响应复述其中的 Core Principle，明确当前进入 forced CTRL reconstitution，不先要求用户从零解释整个 Work，而是先执行 repository-first bounded recovery：
-
-```text
-canonical owners
-→ latest durable evidence
-→ stale-dispatch reconciliation
-→ current control state
-```
-
-随后生成 Reconstructed CTRL Continuity Delta，明确区分 CONFIRMED / RECONSTRUCTED / UNCERTAIN，只把真正影响后续路线的少量 UNCERTAIN 项提交人工回答 / 校准；校准后形成 calibrated successor CTRL 并继续控制。人工记忆或旧 conversation evidence 可以提高 judgement continuity，但不得覆盖 canonical repository authority。
-
-三个 intent 都不创建 Mode、不创建新的 lifecycle、不创建 command / alias / invocation registry、不创建 mutable preference 或 Delta ledger，也不创建新的 authority owner；它们不自动授予 Git、Formal Review、production / release、merge 或 main integration 权限。
-
-## Minimum Sufficient Context（最小充分恢复）
-
-Mandatory read-set 不是“重要文件清单”，而是如果不读就不能安全或正确完成当前任务的最小集合。
-
-通常按以下顺序建立当前 authority：
-
-1. 本文件与 `.workflow-kit.yml`；
-2. `agents/overrides/registry.json`；
-3. `agents/WORK_INDEX.md`；
-4. 有活动 Work 时读取 Primary Task Contract；
-5. 只读取当前 assignment 所需的 Planning / CURRENT / Review owner；
-6. `agents/kit/core-protocol.md#12-action-routing-index`；
-7. 只读取当前动作适用的 standard；
-8. 只有需要领域信息时读取 `docs/project/domain-entry.md` 及其 pointer；
-9. 只有需要本机事实时检查 local-only state。
-
-historical evidence、retrospective、archive、old Review 默认 pointer-first / on-demand。Cold Start 不等于 Full Historical Reload。
-
-## 控制面
-
-- 建立 Work ID 前先按 Core 执行 Formal Work Entry Check；边界清晰的短期直接工作可不建立完整 Work，规范性资产直接维护还必须是非语义 LIGHT；两者仍需授权、产出／精确 diff、验证和必要证据。
-- 每个正式 Work 只有一个 Work ID 和 Primary Task Contract，并登记在 `agents/WORK_INDEX.md`。
-- CTRL 定义和授权；IMPL 只在批准范围内实施；REVIEW 执行 Formal Review。Formal Review 不自动要求新会话或 independent reviewer；只有独立性本身属于 acceptance evidence 时才启用 Protected Independent Review。
-- Session action 与 Context strategy 分开判断；常用组合为 `STAY + CONTINUE`、`STAY + REFRESH`、`CREATE + BOUNDED`、`CREATE + INDEPENDENT`。role change、Formal Review、复杂度或 stronger capability need 单独均不自动 `CREATE`。
-- `CREATE` / `RETURN` 只触发 Delta State Sync owner evaluation，不机械 touch Planning 三件套或 CURRENT；没有 owned-fact delta 且现有 canonical state 足够时允许 zero-write。
-- `agents/handoffs/CURRENT.md` 只在真实责任/上下文交接需要 durable recovery envelope 时使用。Task Capsule 只能是 CURRENT 的 bounded shape 或从 canonical owners 生成的 ephemeral view，不是新 owner。
-- 规范性资产变更先按 `agents/kit/normative-asset-change-control.md` 分级；正式 Skill create/substantial change/Review 先加载 `agents/kit/skill-design-principles.md`，再按实际 failure mode 选择验证。
-- Profile 只声明长期预设；专业 Module 默认休眠，由当前意图／合同按需激活，用户无需管理内部开关。
-- Human Acceptance 只在真实 human-owned criterion 存在时启用；Formal Work、`STRICT`、Review 或 normative change 标签本身不自动创建 Human Gate。
-- README／Navigation Impact 和新鲜度按 `docs/operations/readme-navigation.md` 检查。
-
-本节只提供入口摘要；完整义务由适用 standard 主责。
-
-## 四层边界
-
-- **Kit Base**：`agents/kit/*.md` 和其他 Kit Managed 资产；固定来源，不直接修改。
-- **Project Overlay**：`docs/project/domain-entry.md` 及其项目权威来源；表达领域规则，不复制 Base 正文。
-- **Registered Overrides**：`agents/overrides/registry.json`；仅登记＋引用，有效 scope 内优先。
-- **Local-only State**：`.workflow-kit.local.yml` 或 `local/` 中的机器事实；不得提交，不具有规范覆盖权。
-
-Override 不得绕过用户批准、Git 门禁、acceptance contract 明确要求的 Protected Independent Review、Production Trace、Kit Managed 边界或敏感信息边界。引用失效、冲突或越权时停止受影响动作并返回 CTRL／用户。
-
-## 停止与返回
-
-以下情况不得自行继续：
-
-- 是否需要正式 Work 无法判断；或需要正式 Work 时 Work、合同、权限或 Return Target 不清；
-- Base、Overlay 或 Override 实质冲突；
-- Override 引用失效、重复、循环、scope 重叠或命中 protected control；
-- local-only 状态被纳入提交、未 ignore 或含敏感信息；
-- 需要未获批准的文件修改、Git 写动作、外部写入或正式生产；
-- Manifest、source commit、所有权或安装完整性无法可靠确认。
+1. **先选任务，再接续。** 持续、多步或需跨会话的工作使用 PWF 原生有名计划，保留阶段和状态格式；从索引选择或创建唯一任务目录，并核对分支、基线提交、远端更新、本地改动及在途操作。只有小型且无需接续的工作可直接处理，不建空计划。
+2. **同一入口，独立绑定。** 远端、电脑端和其他 Agent 使用同一仓库相对路径。宿主支持时，在启动会话前用 `PLAN_ID` 显式选中任务；工作目录不是仓库根时同时指定 `PWF_PLAN_ROOT`。不把本机激活指针、钩子输出或子进程环境当作跨端绑定；无法绑定或没有 PWF 时，直接读写已明确选定的任务目录，不改用另一任务或根目录状态。
+3. **人工确认落盘，记录不自授权。** 用户确认范围、预算、权限或验收变更后，由接收会话更新 `TASK.md`，保留确认依据；计划可在已批准范围内滚动更新。聊天不会自动同步，历史文件、PWF 注入和 Agent 交接不产生授权。无写权限时提供待落盘稿，不称记录已更新。
+4. **一个计划维护者。** 并行执行者按分工记录各自的结果与证据，由计划维护者汇总共享状态。不同任务各有目录，不用共享指针切换其他会话，不并发覆盖同一计划；历史任务不自动重启。
+5. **以可核对的版本交接。** 交接列出任务目录、分支及提交 SHA、已完成及已验证事项、未提交改动、下一步和阻塞，并区分执行完成与用户验收。需要另一端接续时，在获得 Git 授权后将安全记录提交并推送；接手方同步并核对该提交后再继续。未推送的改动不能视为远端可用。所需文件若不在 Git 中，单列可用位置和接续条件。
 
 ## Git 与数据安全
 
-commit、push、merge、tag、历史改写、remote、分支删除和公开发布必须取得适用的用户明确批准或有效 Scoped Standing Git Authorization。秘密、真实敏感数据和机器专属状态不得进入 Git。
+- 任务档案中可共享的正文纳入 Git；本机选择器、会话绑定、运行控制和敏感原件留在本地。不得提交凭据、真实敏感数据或机器专属配置。
+- commit、push、merge、tag、历史改写、remote 变更、分支删除和公开发布仍须对应的明确批准或有效的范围授权。同步冲突先核对来源和归属，不覆盖他人改动，不自动 stash、reset、clean 或强推。

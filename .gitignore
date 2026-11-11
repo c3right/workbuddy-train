@@ -1,4 +1,5 @@
-.workflow-kit.local.yml
+# Local configuration, including stale configuration in older checkouts.
+/.workflow-kit.local.yml
 local/
 .env
 .env.*
@@ -12,5 +13,6 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Actual machine state belongs in ignored files; committed .workflow-kit.yml
-# records only relative paths, rules and patterns.
+# Keep PWF task Markdown shareable; keep local selection and runtime state out of Git.
+/.planning/**/.*
+/.planning/**/ledger-*.jsonl
